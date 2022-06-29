@@ -17,10 +17,15 @@ parameters = {
 graph_endpoint = f"{pixela_endpoint}/{USER_NAME}/graphs"
 
 graph_parameters = {
-    "id": "Graph",
+    "id": "graph01",
     "name": "Studying Graph",
     "unit": "Hour",
     "type": "float",
     "color": "shibafu",
 }
-requests.post()
+
+secure_headers = {
+    "X-USER-TOKEN": TOKEN
+}
+response = requests.post(url=graph_endpoint, json=graph_parameters, headers=secure_headers)
+print(response.text)
