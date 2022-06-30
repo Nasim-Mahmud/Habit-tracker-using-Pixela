@@ -14,6 +14,7 @@ parameters = {
 # response = requests.post(url=pixela_endpoint, json=parameters)
 # print(response.text)
 
+#Generating graph
 graph_endpoint = f"{pixela_endpoint}/{USER_NAME}/graphs"
 
 graph_parameters = {
