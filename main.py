@@ -35,11 +35,11 @@ secure_headers = {
 
 # Generating a pixel
 pixel_endpoint = f"{pixela_endpoint}/{USER_NAME}/graphs/{GRAPH_ID}"
-today = datetime.now()
+today = datetime(year=2022, month=6, day=30)
 
 pixel_parameters = {
     "date": today.strftime("%Y%m%d"),
-    "quantity": "10.0",
+    "quantity": "20.0",
 
 }
 response = requests.post(url=pixel_endpoint, json=pixel_parameters, headers=secure_headers)
