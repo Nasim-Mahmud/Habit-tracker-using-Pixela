@@ -42,5 +42,5 @@ pixel_parameters = {
     "quantity": "20.0",
 
 }
-response = requests.post(url=pixel_endpoint, json=pixel_parameters, headers=secure_headers)
-print(response.text)
+# response = requests.post(url=pixel_endpoint, json=pixel_parameters, headers=secure_headers)
+# print(response.text)
