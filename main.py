@@ -45,4 +45,4 @@ pixel_parameters = {
 # response = requests.post(url=pixel_endpoint, json=pixel_parameters, headers=secure_headers)
 # print(response.text)
 
-# Deleting a pixel.
+# Updating and deleting a pixel.
