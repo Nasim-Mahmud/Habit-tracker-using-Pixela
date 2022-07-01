@@ -41,11 +41,11 @@ today_formatted = today.strftime("%Y%m%d")
 
 pixel_parameters = {
     "date": today_formatted,
-    "quantity": input("How many hours you studied todays?"),
+    "quantity": input("How many hours you studied todays?\n"),
 
 }
-# response = requests.post(url=pixel_endpoint, json=pixel_parameters, headers=secure_headers)
-# print(response.text)
+response = requests.post(url=pixel_endpoint, json=pixel_parameters, headers=secure_headers)
+print(response.text)
 
 # Updating and deleting a pixel.
 # Updating
@@ -61,5 +61,5 @@ pixel_update_parameter = {
 # Deleting
 pixel_delete_endpoint = f"{pixela_endpoint}/{USER_NAME}/graphs/{GRAPH_ID}/{today_formatted}"
 
-response = requests.delete(url=pixel_delete_endpoint, headers=secure_headers)
-print(response.text)
+# response = requests.delete(url=pixel_delete_endpoint, headers=secure_headers)
+# print(response.text)
