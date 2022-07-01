@@ -42,4 +42,5 @@ pixel_parameters = {
 secure_headers = {
     "X-USER-TOKEN": TOKEN
 }
-response
+response = requests.get(url=pixel_endpoint, json=pixel_parameters, headers=secure_headers)
+print(response.text)
