@@ -48,11 +48,18 @@ pixel_parameters = {
 # print(response.text)
 
 # Updating and deleting a pixel.
+# Updating
 pixel_update_endpoint = f"{pixela_endpoint}/{USER_NAME}/graphs/{GRAPH_ID}/{today_formatted}"
 
 pixel_update_parameter = {
-    "quantity": "0",
+    "quantity": "2.5",
 }
 
-response = requests.put(url=pixel_update_endpoint, json=pixel_update_parameter, headers=secure_headers)
+# response = requests.put(url=pixel_update_endpoint, json=pixel_update_parameter, headers=secure_headers)
+# print(response.text)
+
+# Deleting
+pixel_delete_endpoint = f"{pixela_endpoint}/{USER_NAME}/graphs/{GRAPH_ID}/{today_formatted}"
+
+response = requests.delete(url=pixel_delete_endpoint, headers=secure_headers)
 print(response.text)
