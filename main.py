@@ -35,10 +35,11 @@ secure_headers = {
 
 # Generating a pixel
 pixel_endpoint = f"{pixela_endpoint}/{USER_NAME}/graphs/{GRAPH_ID}"
-today = datetime(year=2022, month=6, day=30)
+today = datetime.now()
+today_formatted = today.strftime("%Y%m%d")
 
 pixel_parameters = {
-    "date": today.strftime("%Y%m%d"),
+    "date": today_formatted,
     "quantity": "20.0",
 
 }
@@ -46,3 +47,11 @@ pixel_parameters = {
 # print(response.text)
 
 # Updating and deleting a pixel.
+pixel_update_endpoint = f"{pixela_endpoint}/{USER_NAME}/graphs/{GRAPH_ID}/{today_formatted}"
+
+pixel_update_parameter = {
+    "quantity": "0",
+}
+
+response = requests.put(url=pixel_update_endpoint, json=pixel_update_parameter, headers=secure_headers)
+print(response.text)
