@@ -41,7 +41,7 @@ today_formatted = today.strftime("%Y%m%d")
 
 pixel_parameters = {
     "date": today_formatted,
-    "quantity": "20.0",
+    "quantity": input("How many hours you studied todays?"),
 
 }
 # response = requests.post(url=pixel_endpoint, json=pixel_parameters, headers=secure_headers)
