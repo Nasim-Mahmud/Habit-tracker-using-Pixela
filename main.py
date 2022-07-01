@@ -1,5 +1,6 @@
-import requests
 from datetime import datetime
+
+import requests
 
 USER_NAME = "nas13"
 TOKEN = "ryC7YTsmnDf7Bc57"
@@ -16,7 +17,7 @@ parameters = {
 # response = requests.post(url=pixela_endpoint, json=parameters)
 # print(response.text)
 
-#Generating graph in Pixela
+# Generating graph in Pixela
 graph_endpoint = f"{pixela_endpoint}/{USER_NAME}/graphs"
 
 graph_parameters = {
