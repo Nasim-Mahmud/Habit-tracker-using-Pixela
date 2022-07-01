@@ -44,6 +44,3 @@ pixel_parameters = {
 }
 response = requests.post(url=pixel_endpoint, json=pixel_parameters, headers=secure_headers)
 print(response.text)
-
-
-print(today.strftime("%Y%m%d"))
