@@ -46,7 +46,7 @@ pixel_parameters = {
 response = requests.post(url=pixel_endpoint, json=pixel_parameters, headers=secure_headers)
 print(response.text)
 
-# Updating and deleting a pixel.
+## Updating and deleting a pixel.
 # Updating
 pixel_update_endpoint = f"{pixela_endpoint}/{USER_NAME}/graphs/{GRAPH_ID}/{today_formatted}"
 
