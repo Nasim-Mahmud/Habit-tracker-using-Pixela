@@ -13,7 +13,6 @@ parameters = {
     "notMinor": "yes"
 }
 
-
 # response = requests.post(url=pixela_endpoint, json=parameters)
 # print(response.text)
 
